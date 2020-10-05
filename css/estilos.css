@@ -1,0 +1,44 @@
+.item-menu {
+  margin-top: 20px;
+  display: flex;
+  border: 1px solid red;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.list-productos {
+  border: 1px solid brown;
+  display: flex;
+  flex-wrap: wrap;
+}
+.list-productos input {
+  width: 20%;
+  margin-bottom: 10px;
+}
+.list-productos label {
+  width: 70%;
+  margin-left: 15px;
+  line-height: 35px;
+}
+.descuento input {
+  width: 10%;
+}
+
+.descuento {
+}
+.calcular {
+  width: 60%;
+}
+.nuevo {
+  width: 39%;
+}
+.recibo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.recibo input {
+  width: 80%;
+}
+.recibo label {
+  width: 18%;
+}

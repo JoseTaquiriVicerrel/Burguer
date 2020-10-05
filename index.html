@@ -9,57 +9,152 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/estilos.css" />
     <title>Document</title>
-    <style>
-      input {
-        width: 104px;
-      }
-    </style>
   </head>
   <body>
     <h1></h1>
-    <div class="row">
-      <div class="col-sm-6">
-        <select name="" id="ListaCombos" class="form-control form-control-lg">
-          <option id="combo1" value="0">Combo 1</option>
-          <option value="1">Combo 2</option>
-          <option value="2">Combo 3</option>
-          <option value="3">Combo 4</option>
-          <option value="4">Combo 5</option>
-          <option value="5">Combo 6</option>
-          <option value="6">Combo 7</option>
-          <option value="7">Combo 8</option>
-          <option value="8">Combo 9</option>
-          <option value="9">Combo 10</option>
-        </select>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-4">
-        <div class="item-menu">
-          <input class="form-control" type="number" name="" id="cbo0" />
-          <label for="">Pizza(S/. 7.00)</label>
-        </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-5">
+          <select name="" id="ListaCombos" class="form-control form-control-lg">
+            <option id="combo1" value="0">Combo 1</option>
+            <option value="1">Combo 2</option>
+            <option value="2">Combo 3</option>
+            <option value="3">Combo 4</option>
+            <option value="4">Combo 5</option>
+            <option value="5">Combo 6</option>
+            <option value="6">Combo 7</option>
+            <option value="7">Combo 8</option>
+            <option value="8">Combo 9</option>
+            <option value="9">Combo 10</option>
+          </select>
 
-        <input class="form-control" type="number" name="" id="cbo1" />
-        <label for="">Hamburguesa especial(S/. 15.00)</label>
-        <input class="form-control" type="number" name="" id="cbo2" />
-        <label for="">Pollo Broster(S/. 20.00)</label>
-        <input class="form-control" type="number" name="" id="cbo3" />
-        <label for="">Nuggets(S/. 7.00)</label>
-        <input class="form-control" type="number" name="" id="cbo4" />
-        <label for="">Papas(S/. 8.00)</label>
-        <input class="form-control" type="number" name="" id="cbo5" />
-        <label for="">Ensalada(S/. 0)</label>
-        <input class="form-control" type="number" name="" id="cbo6" />
-        <label for="">Yogurt(S/. 3.50)</label>
-        <input class="form-control" type="number" name="" id="cbo7" />
-        <label for="">Gaseosa(S/. 3.50)</label>
-        <input class="form-control" type="number" name="" id="cbo8" />
-        <label for="">Refresco(S/. 3.50)</label>
-        <input class="form-control" type="number" name="" id="cbo9" />
-        <label for="">Agua Mineral(S/. 1.50)</label>
+          <div class="card">
+            <div class="card-header">
+              <div class="card-header-title">Servicios</div>
+            </div>
+            <div class="card-body list-productos">
+              <input
+                class="form-control"
+                type="number"
+                min="0"
+                name=""
+                id="cbo0"
+              />
+              <label for="">Pizza(S/. 7.00)</label>
+              <input
+                class="form-control"
+                type="number"
+                min="0"
+                name=""
+                id="cbo1"
+              />
+              <label for="">Hamburguesa especial(S/. 15.00)</label>
+              <input
+                class="form-control"
+                type="number"
+                min="0"
+                name=""
+                id="cbo2"
+              />
+              <label for="">Pollo Broster(S/. 20.00)</label>
+              <input
+                class="form-control"
+                type="number"
+                min="0"
+                name=""
+                id="cbo3"
+              />
+              <label for="">Nuggets(S/. 7.00)</label>
+              <input
+                class="form-control"
+                type="number"
+                min="0"
+                name=""
+                id="cbo4"
+              />
+              <label for="">Papas(S/. 8.00)</label>
+              <input
+                class="form-control"
+                type="number"
+                min="0"
+                name=""
+                id="cbo5"
+              />
+              <label for="">Ensalada(S/. 0)</label>
+              <input
+                class="form-control"
+                type="number"
+                min="0"
+                name=""
+                id="cbo6"
+              />
+              <label for="">Yogurt(S/. 3.50)</label>
+              <input
+                class="form-control"
+                type="number"
+                min="0"
+                name=""
+                id="cbo7"
+              />
+              <label for="">Gaseosa(S/. 3.50)</label>
+              <input
+                class="form-control"
+                type="number"
+                min="0"
+                name=""
+                id="cbo8"
+              />
+              <label for="">Refresco(S/. 3.50)</label>
+              <input
+                class="form-control"
+                type="number"
+                min="0"
+                name=""
+                id="cbo9"
+              />
+              <label for="">Agua Mineral(S/. 1.50)</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <div class="card">
+              <div class="card-header" style="background-color: darkcyan">
+                Descuento
+              </div>
+              <div class="card-body descuento">
+                <input type="checkbox"  name="" id="" />
+                <label for="targeta">Targeta de Credito(5%)</label>
+                <input type="checkbox" name="" id="" />
+                <label for="delivery">Delivery(S/10)</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+              <div class="card">
+                <div class="card-header" style="background-color: darkcyan">
+                  Total
+                </div>
+                <div class="card-body recibo">
+                  <button type="submit" class="btn btn-primary form-control calcular">Calcular</button>
+                  <a href="" class="btn btn-danger form-control nuevo">Nuevo</a>
+                <label for="Subtotal">Sub Total :</label>
+                <input type="text" class="form-control" class="subtotal">
+                <label for="igv">IGV :</label>
+                <input type="text" class="form-control" class="IGV">
+                <label for="total">Total :</label>
+                  <input type="text" class="form-control" class="total">
+                </div>
+               
+                
+              
+              </div>
+            </div>
+          
       </div>
+      <div class="row"></div>
     </div>
     <script src="script.js"></script>
   </body>

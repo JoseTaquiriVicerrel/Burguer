@@ -1,36 +1,3 @@
-var check = document.getElementById("ListaCombos");
-check.addEventListener("change", (event) => {
-  var indice = check.value;
-  switch (indice) {
-    case "0":
-      var array = [0, 5, 8];
-      ActiarCombo(array);
-      console.log("opcion1");
-      break;
-    case "1":
-      var array = [3, 5, 7];
-      ActiarCombo(array);
-      console.log("opcion2");
-      break;
-    case 2:
-      ActiarCombo([1, 3, 8]);
-      break;
-    case 3:
-      ActiarCombo([3, 5, 7]);
-      break;
-    case 4:
-      ActiarCombo([3, 5, 7]);
-      break;
-    case 5:
-      ActiarCombo([3, 5, 7]);
-      break;
-    case 6:
-      ActiarCombo([3, 5, 7]);
-      break;
-  }
-  //desabilitar();
-});
-
 const item1 = document.getElementById("cbo1");
 const item2 = document.getElementById("cbo2");
 const item3 = document.getElementById("cbo3");
@@ -78,3 +45,34 @@ function desabilitar(aux) {
   item9.disabled = aux;
   item0.disabled = aux;
 }
+var check = document.getElementById("ListaCombos");
+check.addEventListener("change", (event) => {
+  var indice = check.value;
+  var array;
+  switch (indice) {
+    case "0":
+      var array = [0, 5, 8];
+      break;
+    case "1":
+      var array = [3, 5, 7];
+      console.log(item1);
+      break;
+    case 2:
+      var array = [1, 3, 8];
+      break;
+    case 3:
+      var array = [1, 3, 8];
+      break;
+    case 4:
+      var array = [1, 3, 8];
+      break;
+    case 5:
+      var array = [1, 3, 8];
+      break;
+    case 6:
+      var array = [1, 3, 8];
+      break;
+  }
+  ActiarCombo(array);
+  //desabilitar();
+});
