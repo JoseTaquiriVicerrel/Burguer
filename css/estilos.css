@@ -6,7 +6,6 @@
   flex-wrap: wrap;
 }
 .list-productos {
-  border: 1px solid brown;
   display: flex;
   flex-wrap: wrap;
 }
@@ -15,8 +14,6 @@
   margin-bottom: 10px;
 }
 .list-productos label {
-  width: 70%;
-  margin-left: 15px;
   line-height: 35px;
 }
 .descuento input {
@@ -37,8 +34,40 @@
   justify-content: space-between;
 }
 .recibo input {
-  width: 80%;
+  text-align: right;
 }
-.recibo label {
-  width: 18%;
+.list-productos label {
+  margin-left: 20px;
+  width: 60%;
+}
+.product-image {
+  width: 80px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid brown;
+}
+body {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  font-family: sans-serif;
+}
+#ListaCombos {
+  margin-bottom: 20px;
+}
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+h1 {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.container-fluid {
+  width: 100%;
 }

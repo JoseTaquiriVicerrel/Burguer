@@ -3,25 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css" />
     <title>Document</title>
   </head>
   <body>
-    <h1></h1>
-    <div class="container">
+    <h1>Hamburguesa</h1>
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-5">
+        <div class="col-sm-6">
           <select name="" id="ListaCombos" class="form-control form-control-lg">
             <option id="combo1" value="0">Combo 1</option>
             <option value="1">Combo 2</option>
             <option value="2">Combo 3</option>
-            <option value="3">Combo 4</option>
+            <option value="3">Personalizado</option>
             <option value="4">Combo 5</option>
             <option value="5">Combo 6</option>
             <option value="6">Combo 7</option>
@@ -36,120 +31,149 @@
             </div>
             <div class="card-body list-productos">
               <input
+              disabled
                 class="form-control"
                 type="number"
                 min="0"
-                name=""
+                name="Pizza"
+                value="0"
                 id="cbo0"
               />
               <label for="">Pizza(S/. 7.00)</label>
+              <img src="imagenes/Pizza.jpeg" class="product-image">
               <input
+              disabled
                 class="form-control"
                 type="number"
                 min="0"
-                name=""
+                name="Hamburguesa Especial"
+                value="0"
                 id="cbo1"
               />
+
               <label for="">Hamburguesa especial(S/. 15.00)</label>
+              <img src="imagenes/Hamburguesa.jpeg" class="product-image">
               <input
+              disabled
                 class="form-control"
                 type="number"
                 min="0"
-                name=""
+                name="Pollo Broster"
+                value="0"
                 id="cbo2"
               />
               <label for="">Pollo Broster(S/. 20.00)</label>
+              <img src="imagenes/PolloBroster.jpeg" class="product-image">
               <input
+              disabled
                 class="form-control"
                 type="number"
                 min="0"
-                name=""
+                value="0"
+                name="Nuggets"
                 id="cbo3"
               />
               <label for="">Nuggets(S/. 7.00)</label>
+              <img src="imagenes/Nuggets.jpeg" class="product-image">
               <input
+              disabled
                 class="form-control"
                 type="number"
                 min="0"
-                name=""
+                value="0"
+                name="Papas"
                 id="cbo4"
               />
               <label for="">Papas(S/. 8.00)</label>
+              <img src="imagenes/Papas.jpeg" class="product-image">
               <input
+              disabled
                 class="form-control"
                 type="number"
                 min="0"
-                name=""
+                name="Ensalada"
+                value="0"
                 id="cbo5"
               />
-              <label for="">Ensalada(S/. 0)</label>
+              <label for="">Ensalada(S/. 10.00)</label>
+              <img src="imagenes/ensalada.jpeg" class="product-image">
               <input
+              disabled
                 class="form-control"
                 type="number"
                 min="0"
-                name=""
+                name="Yogurt"
+                value="0"
                 id="cbo6"
               />
-              <label for="">Yogurt(S/. 3.50)</label>
+              <label for="">Yogurt(S/. 8.00)</label>
+              <img src="imagenes/Yogurt.jpeg" class="product-image">
               <input
+              disabled
                 class="form-control"
                 type="number"
                 min="0"
-                name=""
+                name="Gaseosa"
                 id="cbo7"
+                value="0"
               />
-              <label for="">Gaseosa(S/. 3.50)</label>
+              <label for="">Gaseosa(S/. 2.00)</label>
+              <img src="imagenes/Gaseos.jpeg" class="product-image">
               <input
+              disabled
                 class="form-control"
                 type="number"
                 min="0"
-                name=""
+                name="Refresco"
                 id="cbo8"
+                value="0"
               />
               <label for="">Refresco(S/. 3.50)</label>
+              <img src="imagenes/refresco.jpeg" class="product-image">
               <input
+              disabled
                 class="form-control"
                 type="number"
                 min="0"
-                name=""
+                name="Agua Mineral"
                 id="cbo9"
+                value="0"
               />
               <label for="">Agua Mineral(S/. 1.50)</label>
+              <img src="imagenes/AguaMinera.jpeg" class="product-image">
             </div>
           </div>
         </div>
-        <div class="col-sm-6">
+        
+        <div class="col-sm-4">
           <div class="form-group">
             <div class="card">
-              <div class="card-header" style="background-color: darkcyan">
+              <div class="card-header" style="background-color: rgb(238, 218, 39)">
                 Descuento
               </div>
               <div class="card-body descuento">
-                <input type="checkbox"  name="" id="" />
+                <input type="checkbox"  name="" id="Targeta" />
                 <label for="targeta">Targeta de Credito(5%)</label>
-                <input type="checkbox" name="" id="" />
+                <input type="checkbox" name="" id="Delivery" />
                 <label for="delivery">Delivery(S/10)</label>
               </div>
             </div>
           </div>
-          <div class="form-group">
-              <div class="card">
-                <div class="card-header" style="background-color: darkcyan">
+          <div class="form-group" >
+              <div class="card" style="background-color: rgb(206, 188, 211);">
+                <div class="card-header" style="background-color:rgb(82, 199, 150);">
                   Total
                 </div>
                 <div class="card-body recibo">
-                  <button type="submit" class="btn btn-primary form-control calcular">Calcular</button>
+                  <a  class="btn btn-primary form-control calcular">Calcular</a>
                   <a href="" class="btn btn-danger form-control nuevo">Nuevo</a>
                 <label for="Subtotal">Sub Total :</label>
-                <input type="text" class="form-control" class="subtotal">
+                <input type="text" class="form-control" class="subtotal" id="subtotal">
                 <label for="igv">IGV :</label>
-                <input type="text" class="form-control" class="IGV">
+                <input type="text" class="form-control" class="IGV" id="IGV">
                 <label for="total">Total :</label>
-                  <input type="text" class="form-control" class="total">
+                  <input type="text" class="form-control" class="total" id="total">
                 </div>
-               
-                
-              
               </div>
             </div>
           
@@ -157,5 +181,8 @@
       <div class="row"></div>
     </div>
     <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>

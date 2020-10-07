@@ -1,78 +1,110 @@
-const item1 = document.getElementById("cbo1");
-const item2 = document.getElementById("cbo2");
-const item3 = document.getElementById("cbo3");
-const item4 = document.getElementById("cbo4");
-const item5 = document.getElementById("cbo5");
-const item6 = document.getElementById("cbo6");
-const item7 = document.getElementById("cbo7");
-const item8 = document.getElementById("cbo8");
-const item9 = document.getElementById("cbo9");
-const item0 = document.getElementById("cbo0");
-const arr = [
-  item1,
-  item2,
-  item3,
-  item4,
-  item4,
-  item5,
-  item6,
-  item7,
-  item8,
-  item9,
-  item0,
-];
+const list = document.querySelector(".list-productos");
+const listProductos = list.getElementsByTagName("input");
 
-function ActiarCombo(list) {
-  desabilitar(true);
-  for (let j = 0; j < list.length; j++) {
-    for (let i = 0; i < arr.length; i++) {
-      if (list[j] == i) {
-        arr[i].disabled = false;
-      }
-      console.log("[" + list[j], i + "]");
-    }
-  }
-}
-function desabilitar(aux) {
-  item1.disabled = aux;
-  item2.disabled = aux;
-  item3.disabled = aux;
-  item4.disabled = aux;
-  item5.disabled = aux;
-  item6.disabled = aux;
-  item7.disabled = aux;
-  item8.disabled = aux;
-  item9.disabled = aux;
-  item0.disabled = aux;
-}
+var array = ["Pizza", "Ensalada", "Refresco"];
+var precios = [7, 10, 3.5];
+
+window.addEventListener("load", function () {
+  ActivarCombo(array, 1);
+});
+
 var check = document.getElementById("ListaCombos");
 check.addEventListener("change", (event) => {
   var indice = check.value;
-  var array;
+  DesactivarCombo(array);
+  var valor = 1;
   switch (indice) {
     case "0":
-      var array = [0, 5, 8];
+      array = ["Pizza", "Ensalada", "Refresco"];
+      precios = [7, 10, 3.5];
       break;
     case "1":
-      var array = [3, 5, 7];
-      console.log(item1);
+      array = ["Pollo Broster", "Papas", "Gaseosa"];
+      precios = [20, 8, 3.5];
       break;
-    case 2:
-      var array = [1, 3, 8];
+    case "2":
+      array = ["Hamburguesa Especial", "Nuggets", "Refresco"];
+      precios = [15, 7, 3.5];
       break;
-    case 3:
-      var array = [1, 3, 8];
+    case "3":
+      array = [
+        "Pizza",
+        "Hamburguesa Especial",
+        "Pollo Broster",
+        "Nuggets",
+        "Papas",
+        "Ensalada",
+        "Yogurt",
+        "Gaseosa",
+        "Refresco",
+        "Agua Mineral",
+      ];
+      precios = [7, 15, 20, 7, 8, 10, 8, 2, 3.5, 1.5];
+      valor = 0;
       break;
-    case 4:
-      var array = [1, 3, 8];
+    case "4":
+      array = ["Pollo Broster", "Nuggets", "Gaseosa"];
+      precios = [20, 7, 2];
       break;
-    case 5:
-      var array = [1, 3, 8];
+    case "5":
+      array = ["Pizza", "Pollo Broster", "Gaseosa"];
+      precios = [7, 20, 2];
       break;
-    case 6:
-      var array = [1, 3, 8];
+    case "6":
+      array = ["Ensalada", "Yogurt", "Agua Mineral"];
+      precios = [10, 8, 1.5];
+      break;
+    case "7":
+      array = ["Papas", "Ensalada", "Nuggets"];
+      precios = [8, 10, 7];
+      break;
+    case "8":
+      array = ["Hamburguesa Especial", "Papas", "Gaseosa"];
+      precios = [15, 8, 2];
+      break;
+    case "9":
+      array = ["Pizza", "Ensalada", "Pollo Broster"];
+      precios = [7, 10, 20];
       break;
   }
-  ActiarCombo(array);
-  //desabilitar();
+  ActivarCombo(array, valor);
+});
+
+function ActivarCombo(list, valor) {
+  for (const item in list) {
+    document.getElementsByName(list[item])[0].disabled = false;
+    document.getElementsByName(list[item])[0].value = valor;
+  }
+}
+
+function DesactivarCombo(list) {
+  for (const item in list) {
+    document.getElementsByName(list[item])[0].disabled = true;
+    document.getElementsByName(list[item])[0].value = 0;
+  }
+}
+
+var TotalProducto = 0;
+var cal = document.querySelector(".calcular");
+cal.addEventListener("click", function () {
+  for (let index = 0; index < array.length; index++) {
+    var itemList = document.getElementsByName(array[index])[0];
+    const cantidad = parseInt(itemList.value, 10);
+    TotalProducto += cantidad * precios[index];
+  }
+
+  var chkTargeta = document.getElementById("Targeta");
+  if (chkTargeta.checked) {
+    TotalProducto += TotalProducto * 0.05;
+  }
+  var chkDelivery = document.getElementById("Delivery");
+  if (chkDelivery.checked) {
+    TotalProducto += 10;
+  }
+  var igv = TotalProducto * 0.18;
+  var opg = TotalProducto - igv;
+  document.getElementById("subtotal").value = "" + opg;
+  document.getElementById("IGV").value = "" + igv;
+  document.getElementById("total").value = "" + TotalProducto;
+  TotalProducto = 0;
 });
